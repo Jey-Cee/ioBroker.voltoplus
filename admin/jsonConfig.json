@@ -1,0 +1,10 @@
+{
+  "type": "panel",
+  "items": {
+    "ip": {
+      "label": "IP",
+      "type": "text",
+      "onlyIp4": true
+    }
+  }
+}
