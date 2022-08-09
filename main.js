@@ -181,11 +181,11 @@ class Voltoplus extends utils.Adapter {
             ack: true,
         });
         await this.setStateAsync("energy_purchased", {
-            val: values[7].value,
+            val: values[7].value / 10,
             ack: true,
         });
         await this.setStateAsync("energy_supplied", {
-            val: values[8].value,
+            val: values[8].value / 10,
             ack: true,
         });
     }

@@ -280,7 +280,7 @@
                 "write": false,
                 "type": "number",
                 "role": "value.power",
-                "unit": "W",
+                "unit": "kWh",
                 "def": 0
             },
             "native": {}
@@ -294,7 +294,7 @@
                 "write": false,
                 "type": "number",
                 "role": "value.power",
-                "unit": "W",
+                "unit": "kWh",
                 "def": 0
             },
             "native": {}
