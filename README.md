@@ -28,6 +28,9 @@ The adapter will read the data every second.
 The developers of this module are in no way endorsed by or affiliated with Wallner Automation GmbH,
 or any associated subsidiaries, logos or trademarks.
 
+## Links
+[Product](https://www.voltoplus.com/shop/voltoplus/167/voltoplus?c=44)
+
 ## Changelog
 <!--
     Placeholder for the next version (at the beginning of the line):
