@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "voltoplus",
-        "version": "0.0.1",
+        "version": "0.1.0",
         "news": {
+            "0.1.0": {
+                "en": "Changed unit of energy_purchased & energy_supplied from W to kWh; divide value of energy_purchased & energy_supplied by 10; Updated depenendencies;",
+                "de": "Einheit von energy_purchased & energy_supplied von W auf kWh geändert; Wert von energy_purchased & energy_supplied durch 10 teilen; Abhängigkeiten aktualisiert;"
+            },
             "0.0.1": {
                 "en": "initial release",
                 "de": "Erstveröffentlichung",
