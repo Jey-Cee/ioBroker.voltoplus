@@ -37,6 +37,11 @@ or any associated subsidiaries, logos or trademarks.
     ### **WORK IN PROGRESS**
 -->
 
+### **WORK IN PROGRESS**
+* Changed unit of energy_purchased & energy_supplied from W to kWh
+* divide value of energy_purchased & energy_supplied by 10
+* Update depenendencies 
+
 ### 0.0.1
 * (Jey Cee) initial release
 
