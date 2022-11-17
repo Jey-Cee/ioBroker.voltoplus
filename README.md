@@ -36,6 +36,10 @@ or any associated subsidiaries, logos or trademarks.
     Placeholder for the next version (at the beginning of the line):
     ### **WORK IN PROGRESS**
 -->
+
+### **WORK IN PROGRESS**
+* some fixes for relesase 
+
 ### 0.1.0 (2022-10-18)
 * Changed unit of energy_purchased & energy_supplied from W to kWh
 * divide value of energy_purchased & energy_supplied by 10
