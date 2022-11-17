@@ -1,21 +1,8 @@
 {
   "common": {
     "name": "voltoplus",
-    "version": "0.1.1",
+    "version": "0.1.0",
     "news": {
-      "0.1.1": {
-        "en": "some fixes for relesase",
-        "de": "einige korrekturen für relesase",
-        "ru": "некоторые исправления для relesase",
-        "pt": "algumas correções para relesase",
-        "nl": "wat reparaties voor losgeld",
-        "fr": "quelques corrections pour relesase",
-        "it": "alcune correzioni per il relesase",
-        "es": "algunos arreglos para el alivio",
-        "pl": "niektóre próby relezy",
-        "uk": "деякі застібки для relesase",
-        "zh-cn": "改装的一些缺陷"
-      },
       "0.1.0": {
         "en": "Changed unit of energy_purchased & energy_supplied from W to kWh; divide value of energy_purchased & energy_supplied by 10; Updated depenendencies;",
         "de": "Einheit von energy_purchased & energy_supplied von W auf kWh geändert; Wert von energy_purchased & energy_supplied durch 10 teilen; Abhängigkeiten aktualisiert;"
