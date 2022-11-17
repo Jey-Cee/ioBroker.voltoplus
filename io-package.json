@@ -1,307 +1,496 @@
 {
-    "common": {
-        "name": "voltoplus",
-        "version": "0.1.0",
-        "news": {
-            "0.1.0": {
-                "en": "Changed unit of energy_purchased & energy_supplied from W to kWh; divide value of energy_purchased & energy_supplied by 10; Updated depenendencies;",
-                "de": "Einheit von energy_purchased & energy_supplied von W auf kWh geändert; Wert von energy_purchased & energy_supplied durch 10 teilen; Abhängigkeiten aktualisiert;"
-            },
-            "0.0.1": {
-                "en": "initial release",
-                "de": "Erstveröffentlichung",
-                "ru": "Начальная версия",
-                "pt": "lançamento inicial",
-                "nl": "Eerste uitgave",
-                "fr": "Première version",
-                "it": "Versione iniziale",
-                "es": "Versión inicial",
-                "pl": "Pierwsze wydanie",
-                "zh-cn": "首次出版"
-            }
-        },
-        "title": "VoltoPlus",
-        "titleLang": {
-            "en": "VoltoPlus",
-            "de": "VoltoPlus",
-            "ru": "ВольтоПлюс",
-            "pt": "Volto Plus",
-            "nl": "VoltoPlus",
-            "fr": "VoltoPlus",
-            "it": "Volto Plus",
-            "es": "Volto Plus",
-            "pl": "VoltoPlus",
-            "zh-cn": "VoltoPlus"
-        },
-        "desc": {
-            "en": "Get actual data from VoltoPlus energy meter.",
-            "de": "Erhalten Sie aktuelle Daten vom VoltoPlus-Energiezähler.",
-            "ru": "Получите актуальные данные от счетчика энергии VoltoPlus.",
-            "pt": "Obtenha dados reais do medidor de energia VoltoPlus.",
-            "nl": "Krijg actuele gegevens van de VoltoPlus energiemeter.",
-            "fr": "Obtenez les données réelles du compteur d'énergie VoltoPlus.",
-            "it": "Ottieni i dati effettivi dal contatore di energia VoltoPlus.",
-            "es": "Obtenga datos reales del medidor de energía VoltoPlus.",
-            "pl": "Uzyskaj aktualne dane z licznika energii VoltoPlus.",
-            "zh-cn": "从 VoltoPlus 电能表获取实际数据。"
-        },
-        "authors": [
-            "Jey Cee <jey-cee@live.com>"
-        ],
-        "keywords": [
-            "Energy meter",
-            "VoltoPlus"
-        ],
-        "license": "MIT",
-        "platform": "Javascript/Node.js",
-        "main": "main.js",
-        "icon": "voltoplus.png",
-        "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.voltoplus/main/admin/voltoplus.png",
-        "readme": "https://github.com/Jey-Cee/ioBroker.voltoplus/blob/main/README.md",
-        "loglevel": "info",
-        "mode": "daemon",
-        "type": "energy",
-        "compact": true,
-        "connectionType": "local",
-        "dataSource": "poll",
-        "adminUI": {
-            "config": "json"
-        },
-        "dependencies": [
-            {
-                "js-controller": ">=2.0.0"
-            }
-        ]
+  "common": {
+    "name": "voltoplus",
+    "version": "0.1.1",
+    "news": {
+      "0.1.1": {
+        "en": "some fixes for relesase",
+        "de": "einige korrekturen für relesase",
+        "ru": "некоторые исправления для relesase",
+        "pt": "algumas correções para relesase",
+        "nl": "wat reparaties voor losgeld",
+        "fr": "quelques corrections pour relesase",
+        "it": "alcune correzioni per il relesase",
+        "es": "algunos arreglos para el alivio",
+        "pl": "niektóre próby relezy",
+        "uk": "деякі застібки для relesase",
+        "zh-cn": "改装的一些缺陷"
+      },
+      "0.1.0": {
+        "en": "Changed unit of energy_purchased & energy_supplied from W to kWh; divide value of energy_purchased & energy_supplied by 10; Updated depenendencies;",
+        "de": "Einheit von energy_purchased & energy_supplied von W auf kWh geändert; Wert von energy_purchased & energy_supplied durch 10 teilen; Abhängigkeiten aktualisiert;"
+      },
+      "0.0.1": {
+        "en": "initial release",
+        "de": "Erstveröffentlichung",
+        "ru": "Начальная версия",
+        "pt": "lançamento inicial",
+        "nl": "Eerste uitgave",
+        "fr": "Première version",
+        "it": "Versione iniziale",
+        "es": "Versión inicial",
+        "pl": "Pierwsze wydanie",
+        "zh-cn": "首次出版"
+      }
     },
-    "native": {
-        "ip": "0.0.0.0"
+    "title": "VoltoPlus",
+    "titleLang": {
+      "en": "VoltoPlus",
+      "de": "VoltoPlus",
+      "ru": "ВольтоПлюс",
+      "pt": "Volto Plus",
+      "nl": "VoltoPlus",
+      "fr": "VoltoPlus",
+      "it": "Volto Plus",
+      "es": "Volto Plus",
+      "pl": "VoltoPlus",
+      "zh-cn": "VoltoPlus"
     },
-    "objects": [],
-    "instanceObjects": [
-        {
-            "_id": "info",
-            "type": "channel",
-            "common": {
-                "name": {"en": "Information", "de": "Informationen", "ru": "Информация", "pt": "Informação", "nl": "Informatie", "fr": "Information", "it": "Informazioni", "es": "Información", "pl": "Informacja", "zh-cn": "信息"}
-            },
-            "native": {}
-        },
-        {
-            "_id": "info.connection",
-            "type": "state",
-            "common": {
-                "role": "indicator.connected",
-                "name": {"en": "Device connected", "de": "Gerät verbunden", "ru": "Устройство подключено", "pt": "Dispositivo conectado", "nl": "Apparaat verbonden", "fr": "Appareil connecté", "it": "Dispositivo connesso", "es": "Dispositivo conectado", "pl": "Urządzenie podłączone", "zh-cn": "设备已连接"},
-                "type": "boolean",
-                "read": true,
-                "write": false,
-                "def": false
-            },
-            "native": {}
-        },
-        {
-            "_id": "phase_1",
-            "type": "channel",
-            "common": {
-                "name": {"en": "Phase 1", "de": "L1", "ru": "Фаза 1", "pt": "Fase 1", "nl": "Fase 1", "fr": "Phase 1", "it": "Fase 1", "es": "Fase 1", "pl": "Faza 1", "zh-cn": "相1"}
-            },
-            "native": {}
-        },
-        {
-            "_id": "phase_2",
-            "type": "channel",
-            "common": {
-                "name": {"en": "Phase 2", "de": "L2", "ru": "Фаза 2", "pt": "Fase 2", "nl": "Fase 2", "fr": "Phase 2", "it": "Fase 2", "es": "Fase 2", "pl": "Faza 2", "zh-cn": "相2"}
-            },
-            "native": {}
-        },
-        {
-            "_id": "phase_3",
-            "type": "channel",
-            "common": {
-                "name": {"en": "Phase 3", "de": "L3", "ru": "Фаза 3", "pt": "Fase 3", "nl": "Fase 3", "fr": "Phase 3", "it": "Fase 3", "es": "Fase 3", "pl": "Faza 3", "zh-cn": "相3"}
-            },
-            "native": {}
-        },
-        {
-            "_id": "phase_1.voltage",
-            "type": "state",
-            "common": {
-                "name": {"en": "Voltage", "de": "Spannung", "ru": "Напряжение", "pt": "Tensão", "nl": "Voltage", "fr": "Tension", "it": "Tensione", "es": "Tensión", "pl": "Napięcie", "zh-cn": "电压"},
-                "read": true,
-                "write": false,
-                "type": "number",
-                "role": "value.voltage",
-                "unit": "V",
-                "def": 0
-            },
-            "native": {}
-        },
-        {
-            "_id": "phase_2.voltage",
-            "type": "state",
-            "common": {
-                "name": {"en": "Voltage", "de": "Spannung", "ru": "Напряжение", "pt": "Tensão", "nl": "Voltage", "fr": "Tension", "it": "Tensione", "es": "Tensión", "pl": "Napięcie", "zh-cn": "电压"},
-                "read": true,
-                "write": false,
-                "type": "number",
-                "role": "value.voltage",
-                "unit": "V",
-                "def": 0
-            },
-            "native": {}
-        },
-        {
-            "_id": "phase_3.voltage",
-            "type": "state",
-            "common": {
-                "name": {"en": "Voltage", "de": "Spannung", "ru": "Напряжение", "pt": "Tensão", "nl": "Voltage", "fr": "Tension", "it": "Tensione", "es": "Tensión", "pl": "Napięcie", "zh-cn": "电压"},
-                "read": true,
-                "write": false,
-                "type": "number",
-                "role": "value.voltage",
-                "unit": "V",
-                "def": 0
-            },
-            "native": {}
-        },
-        {
-            "_id": "phase_1.current",
-            "type": "state",
-            "common": {
-                "name": {"en": "Current", "de": "Strom", "ru": "Ток", "pt": "Corrente", "nl": "Stroom", "fr": "Courant", "it": "Corrente", "es": "Corriente", "pl": "Prąd", "zh-cn": "电流"},
-                "read": true,
-                "write": false,
-                "type": "number",
-                "role": "value.current",
-                "unit": "A",
-                "def": 0
-            },
-            "native": {}
-        },
-        {
-            "_id": "phase_2.current",
-            "type": "state",
-            "common": {
-                "name": {"en": "Current", "de": "Strom", "ru": "Ток", "pt": "Corrente", "nl": "Stroom", "fr": "Courant", "it": "Corrente", "es": "Corriente", "pl": "Prąd", "zh-cn": "电流"},
-                "read": true,
-                "write": false,
-                "type": "number",
-                "role": "value.current",
-                "unit": "A",
-                "def": 0
-            },
-            "native": {}
-        },
-        {
-            "_id": "phase_3.current",
-            "type": "state",
-            "common": {
-                "name": {"en": "Current", "de": "Strom", "ru": "Ток", "pt": "Corrente", "nl": "Stroom", "fr": "Courant", "it": "Corrente", "es": "Corriente", "pl": "Prąd", "zh-cn": "电流"},
-                "read": true,
-                "write": false,
-                "type": "number",
-                "role": "value.current",
-                "unit": "A",
-                "def": 0
-            },
-            "native": {}
-        },
-        {
-            "_id": "phase_1.power",
-            "type": "state",
-            "common": {
-                "name": {"en": "Power", "de": "Leistung", "ru": "Мощность", "pt": "Potência", "nl": "Vermogen", "fr": "Puissance", "it": "Potenza", "es": "Potencia", "pl": "Moc", "zh-cn": "功率"},
-                "read": true,
-                "write": false,
-                "type": "number",
-                "role": "value.power",
-                "unit": "W",
-                "def": 0
-            },
-            "native": {}
-        },
-        {
-            "_id": "phase_2.power",
-            "type": "state",
-            "common": {
-                "name": {"en": "Power", "de": "Leistung", "ru": "Мощность", "pt": "Potência", "nl": "Vermogen", "fr": "Puissance", "it": "Potenza", "es": "Potencia", "pl": "Moc", "zh-cn": "功率"},
-                "read": true,
-                "write": false,
-                "type": "number",
-                "role": "value.power",
-                "unit": "W",
-                "def": 0
-            },
-            "native": {}
-        },
-        {
-            "_id": "phase_3.power",
-            "type": "state",
-            "common": {
-                "name": {
-                    "en": "Power",
-                    "de": "Leistung",
-                    "ru": "Мощность",
-                    "pt": "Potência",
-                    "nl": "Vermogen",
-                    "fr": "Puissance",
-                    "it": "Potenza",
-                    "es": "Potencia",
-                    "pl": "Moc",
-                    "zh-cn": "功率"
-                },
-                "read": true,
-                "write": false,
-                "type": "number",
-                "role": "value.power",
-                "unit": "W",
-                "def": 0
-            },
-            "native": {}
-        },
-        {
-            "_id": "power",
-            "type": "state",
-            "common": {
-                "name": {"en": "Power over all", "de": "Leistung Gesamt", "ru": "Мощность всего", "pt": "Potência todo", "nl": "Vermogen overal", "fr": "Puissance tout", "it": "Potenza tutta", "es": "Potencia todo", "pl": "Moc wszystkie", "zh-cn": "功率总和"},
-                "read": true,
-                "write": false,
-                "type": "number",
-                "role": "value.power",
-                "unit": "W",
-                "def": 0
-            },
-            "native": {}
-        },
-        {
-            "_id": "energy_purchased",
-            "type": "state",
-            "common": {
-                "name": {"en": "Energy purchased", "de": "Bezogene Energie", "ru": "Энергия покупаемая", "pt": "Energia comprada", "nl": "Energie gekocht", "fr": "Energie achetée", "it": "Energia acquistata", "es": "Energía comprada", "pl": "Energia zakupiona", "zh-cn": "购买能量"},
-                "read": true,
-                "write": false,
-                "type": "number",
-                "role": "value.power",
-                "unit": "kWh",
-                "def": 0
-            },
-            "native": {}
-        },
-        {
-            "_id": "energy_supplied",
-            "type": "state",
-            "common": {
-                "name": {"en": "Energy supplied", "de": "Gelieferte Energie", "ru": "Энергия предоставляемая", "pt": "Energia fornecida", "nl": "Energie aangeboden", "fr": "Energie fournie", "it": "Energia fornita", "es": "Energía suministrada", "pl": "Energia dostarczona", "zh-cn": "供给能量"},
-                "read": true,
-                "write": false,
-                "type": "number",
-                "role": "value.power",
-                "unit": "kWh",
-                "def": 0
-            },
-            "native": {}
-        }
+    "desc": {
+      "en": "Get actual data from VoltoPlus energy meter.",
+      "de": "Erhalten Sie aktuelle Daten vom VoltoPlus-Energiezähler.",
+      "ru": "Получите актуальные данные от счетчика энергии VoltoPlus.",
+      "pt": "Obtenha dados reais do medidor de energia VoltoPlus.",
+      "nl": "Krijg actuele gegevens van de VoltoPlus energiemeter.",
+      "fr": "Obtenez les données réelles du compteur d'énergie VoltoPlus.",
+      "it": "Ottieni i dati effettivi dal contatore di energia VoltoPlus.",
+      "es": "Obtenga datos reales del medidor de energía VoltoPlus.",
+      "pl": "Uzyskaj aktualne dane z licznika energii VoltoPlus.",
+      "zh-cn": "从 VoltoPlus 电能表获取实际数据。"
+    },
+    "authors": [
+      "Jey Cee <jey-cee@live.com>"
+    ],
+    "keywords": [
+      "Energy meter",
+      "VoltoPlus"
+    ],
+    "license": "MIT",
+    "platform": "Javascript/Node.js",
+    "main": "main.js",
+    "icon": "voltoplus.png",
+    "enabled": true,
+    "extIcon": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.voltoplus/main/admin/voltoplus.png",
+    "readme": "https://github.com/Jey-Cee/ioBroker.voltoplus/blob/main/README.md",
+    "loglevel": "info",
+    "mode": "daemon",
+    "type": "energy",
+    "compact": true,
+    "connectionType": "local",
+    "dataSource": "poll",
+    "adminUI": {
+      "config": "json"
+    },
+    "dependencies": [
+      {
+        "js-controller": ">=2.0.0"
+      }
     ]
+  },
+  "native": {
+    "ip": "0.0.0.0"
+  },
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": {
+          "en": "Information",
+          "de": "Informationen",
+          "ru": "Информация",
+          "pt": "Informação",
+          "nl": "Informatie",
+          "fr": "Information",
+          "it": "Informazioni",
+          "es": "Información",
+          "pl": "Informacja",
+          "zh-cn": "信息"
+        }
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "role": "indicator.connected",
+        "name": {
+          "en": "Device connected",
+          "de": "Gerät verbunden",
+          "ru": "Устройство подключено",
+          "pt": "Dispositivo conectado",
+          "nl": "Apparaat verbonden",
+          "fr": "Appareil connecté",
+          "it": "Dispositivo connesso",
+          "es": "Dispositivo conectado",
+          "pl": "Urządzenie podłączone",
+          "zh-cn": "设备已连接"
+        },
+        "type": "boolean",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "phase_1",
+      "type": "channel",
+      "common": {
+        "name": {
+          "en": "Phase 1",
+          "de": "L1",
+          "ru": "Фаза 1",
+          "pt": "Fase 1",
+          "nl": "Fase 1",
+          "fr": "Phase 1",
+          "it": "Fase 1",
+          "es": "Fase 1",
+          "pl": "Faza 1",
+          "zh-cn": "相1"
+        }
+      },
+      "native": {}
+    },
+    {
+      "_id": "phase_2",
+      "type": "channel",
+      "common": {
+        "name": {
+          "en": "Phase 2",
+          "de": "L2",
+          "ru": "Фаза 2",
+          "pt": "Fase 2",
+          "nl": "Fase 2",
+          "fr": "Phase 2",
+          "it": "Fase 2",
+          "es": "Fase 2",
+          "pl": "Faza 2",
+          "zh-cn": "相2"
+        }
+      },
+      "native": {}
+    },
+    {
+      "_id": "phase_3",
+      "type": "channel",
+      "common": {
+        "name": {
+          "en": "Phase 3",
+          "de": "L3",
+          "ru": "Фаза 3",
+          "pt": "Fase 3",
+          "nl": "Fase 3",
+          "fr": "Phase 3",
+          "it": "Fase 3",
+          "es": "Fase 3",
+          "pl": "Faza 3",
+          "zh-cn": "相3"
+        }
+      },
+      "native": {}
+    },
+    {
+      "_id": "phase_1.voltage",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Voltage",
+          "de": "Spannung",
+          "ru": "Напряжение",
+          "pt": "Tensão",
+          "nl": "Voltage",
+          "fr": "Tension",
+          "it": "Tensione",
+          "es": "Tensión",
+          "pl": "Napięcie",
+          "zh-cn": "电压"
+        },
+        "read": true,
+        "write": false,
+        "type": "number",
+        "role": "value.voltage",
+        "unit": "V",
+        "def": 0
+      },
+      "native": {}
+    },
+    {
+      "_id": "phase_2.voltage",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Voltage",
+          "de": "Spannung",
+          "ru": "Напряжение",
+          "pt": "Tensão",
+          "nl": "Voltage",
+          "fr": "Tension",
+          "it": "Tensione",
+          "es": "Tensión",
+          "pl": "Napięcie",
+          "zh-cn": "电压"
+        },
+        "read": true,
+        "write": false,
+        "type": "number",
+        "role": "value.voltage",
+        "unit": "V",
+        "def": 0
+      },
+      "native": {}
+    },
+    {
+      "_id": "phase_3.voltage",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Voltage",
+          "de": "Spannung",
+          "ru": "Напряжение",
+          "pt": "Tensão",
+          "nl": "Voltage",
+          "fr": "Tension",
+          "it": "Tensione",
+          "es": "Tensión",
+          "pl": "Napięcie",
+          "zh-cn": "电压"
+        },
+        "read": true,
+        "write": false,
+        "type": "number",
+        "role": "value.voltage",
+        "unit": "V",
+        "def": 0
+      },
+      "native": {}
+    },
+    {
+      "_id": "phase_1.current",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Current",
+          "de": "Strom",
+          "ru": "Ток",
+          "pt": "Corrente",
+          "nl": "Stroom",
+          "fr": "Courant",
+          "it": "Corrente",
+          "es": "Corriente",
+          "pl": "Prąd",
+          "zh-cn": "电流"
+        },
+        "read": true,
+        "write": false,
+        "type": "number",
+        "role": "value.current",
+        "unit": "A",
+        "def": 0
+      },
+      "native": {}
+    },
+    {
+      "_id": "phase_2.current",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Current",
+          "de": "Strom",
+          "ru": "Ток",
+          "pt": "Corrente",
+          "nl": "Stroom",
+          "fr": "Courant",
+          "it": "Corrente",
+          "es": "Corriente",
+          "pl": "Prąd",
+          "zh-cn": "电流"
+        },
+        "read": true,
+        "write": false,
+        "type": "number",
+        "role": "value.current",
+        "unit": "A",
+        "def": 0
+      },
+      "native": {}
+    },
+    {
+      "_id": "phase_3.current",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Current",
+          "de": "Strom",
+          "ru": "Ток",
+          "pt": "Corrente",
+          "nl": "Stroom",
+          "fr": "Courant",
+          "it": "Corrente",
+          "es": "Corriente",
+          "pl": "Prąd",
+          "zh-cn": "电流"
+        },
+        "read": true,
+        "write": false,
+        "type": "number",
+        "role": "value.current",
+        "unit": "A",
+        "def": 0
+      },
+      "native": {}
+    },
+    {
+      "_id": "phase_1.power",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Power",
+          "de": "Leistung",
+          "ru": "Мощность",
+          "pt": "Potência",
+          "nl": "Vermogen",
+          "fr": "Puissance",
+          "it": "Potenza",
+          "es": "Potencia",
+          "pl": "Moc",
+          "zh-cn": "功率"
+        },
+        "read": true,
+        "write": false,
+        "type": "number",
+        "role": "value.power",
+        "unit": "W",
+        "def": 0
+      },
+      "native": {}
+    },
+    {
+      "_id": "phase_2.power",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Power",
+          "de": "Leistung",
+          "ru": "Мощность",
+          "pt": "Potência",
+          "nl": "Vermogen",
+          "fr": "Puissance",
+          "it": "Potenza",
+          "es": "Potencia",
+          "pl": "Moc",
+          "zh-cn": "功率"
+        },
+        "read": true,
+        "write": false,
+        "type": "number",
+        "role": "value.power",
+        "unit": "W",
+        "def": 0
+      },
+      "native": {}
+    },
+    {
+      "_id": "phase_3.power",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Power",
+          "de": "Leistung",
+          "ru": "Мощность",
+          "pt": "Potência",
+          "nl": "Vermogen",
+          "fr": "Puissance",
+          "it": "Potenza",
+          "es": "Potencia",
+          "pl": "Moc",
+          "zh-cn": "功率"
+        },
+        "read": true,
+        "write": false,
+        "type": "number",
+        "role": "value.power",
+        "unit": "W",
+        "def": 0
+      },
+      "native": {}
+    },
+    {
+      "_id": "power",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Power over all",
+          "de": "Leistung Gesamt",
+          "ru": "Мощность всего",
+          "pt": "Potência todo",
+          "nl": "Vermogen overal",
+          "fr": "Puissance tout",
+          "it": "Potenza tutta",
+          "es": "Potencia todo",
+          "pl": "Moc wszystkie",
+          "zh-cn": "功率总和"
+        },
+        "read": true,
+        "write": false,
+        "type": "number",
+        "role": "value.power",
+        "unit": "W",
+        "def": 0
+      },
+      "native": {}
+    },
+    {
+      "_id": "energy_purchased",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Energy purchased",
+          "de": "Bezogene Energie",
+          "ru": "Энергия покупаемая",
+          "pt": "Energia comprada",
+          "nl": "Energie gekocht",
+          "fr": "Energie achetée",
+          "it": "Energia acquistata",
+          "es": "Energía comprada",
+          "pl": "Energia zakupiona",
+          "zh-cn": "购买能量"
+        },
+        "read": true,
+        "write": false,
+        "type": "number",
+        "role": "value.power",
+        "unit": "kWh",
+        "def": 0
+      },
+      "native": {}
+    },
+    {
+      "_id": "energy_supplied",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Energy supplied",
+          "de": "Gelieferte Energie",
+          "ru": "Энергия предоставляемая",
+          "pt": "Energia fornecida",
+          "nl": "Energie aangeboden",
+          "fr": "Energie fournie",
+          "it": "Energia fornita",
+          "es": "Energía suministrada",
+          "pl": "Energia dostarczona",
+          "zh-cn": "供给能量"
+        },
+        "read": true,
+        "write": false,
+        "type": "number",
+        "role": "value.power",
+        "unit": "kWh",
+        "def": 0
+      },
+      "native": {}
+    }
+  ]
 }
