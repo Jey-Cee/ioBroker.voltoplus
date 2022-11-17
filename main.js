@@ -40,12 +40,7 @@ class Voltoplus extends utils.Adapter {
      */
     onUnload(callback) {
         try {
-            // Here you must clear all timeouts or intervals that may still be active
-            // clearTimeout(timeout1);
-            // clearTimeout(timeout2);
-            // ...
-            // clearInterval(interval1);
-
+            clearTimeout(this.timeout);
             callback();
         } catch (e) {
             callback();
@@ -90,7 +85,7 @@ class Voltoplus extends utils.Adapter {
             await this.setValues(values);
         }
 
-        setTimeout(() => {
+        this.timeout = setTimeout(() => {
             this.collectAndSetValues();
         }, 1000);
     }
