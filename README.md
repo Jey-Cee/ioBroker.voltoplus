@@ -36,7 +36,7 @@ or any associated subsidiaries, logos or trademarks.
     Placeholder for the next version (at the beginning of the line):
     ### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.1.1 (2022-11-17)
 * some fixes for relesase
 
 ### 0.1.0 (2022-10-18)
