@@ -40,6 +40,9 @@ or any associated subsidiaries, logos or trademarks.
 ### 0.1.3 (2023-07-27)
 * stable release
 
+### 0.1.2 (2023-07-27)
+* stable release
+
 ### 0.1.1 (2022-11-17)
 * some fixes for relesase
 

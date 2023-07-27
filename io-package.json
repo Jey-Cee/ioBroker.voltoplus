@@ -3,6 +3,9 @@
     "name": "voltoplus",
     "version": "0.1.3",
     "news": {
+      "0.1.3": {
+        "en": "stable release"
+      },
       "0.1.2": {
         "en": "stable release"
       },
