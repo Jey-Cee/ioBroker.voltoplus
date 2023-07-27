@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "voltoplus",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "news": {
       "0.1.1": {
         "en": "some fixes for relesase",
