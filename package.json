@@ -1,6 +1,6 @@
 {
   "name": "iobroker.voltoplus",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Get actual data from VoltoPlus energy meter.",
   "author": {
     "name": "Jey Cee",
