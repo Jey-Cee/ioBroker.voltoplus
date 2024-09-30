@@ -1,45 +1,16 @@
 {
   "common": {
     "name": "voltoplus",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "news": {
+      "0.1.4": {
+        "en": "Maintanance update",
+        "de": "Pflege update"
+      },
       "0.1.3": {
         "en": "stable release"
-      },
-      "0.1.2": {
-        "en": "stable release"
-      },
-      "0.1.1": {
-        "en": "some fixes for relesase",
-        "de": "einige korrekturen für relesase",
-        "ru": "некоторые исправления для relesase",
-        "pt": "algumas correções para relesase",
-        "nl": "wat reparaties voor losgeld",
-        "fr": "quelques corrections pour relesase",
-        "it": "alcune correzioni per il relesase",
-        "es": "algunos arreglos para el alivio",
-        "pl": "niektóre próby relezy",
-        "uk": "деякі застібки для relesase",
-        "zh-cn": "改装的一些缺陷"
-      },
-      "0.1.0": {
-        "en": "Changed unit of energy_purchased & energy_supplied from W to kWh; divide value of energy_purchased & energy_supplied by 10; Updated depenendencies;",
-        "de": "Einheit von energy_purchased & energy_supplied von W auf kWh geändert; Wert von energy_purchased & energy_supplied durch 10 teilen; Abhängigkeiten aktualisiert;"
-      },
-      "0.0.1": {
-        "en": "initial release",
-        "de": "Erstveröffentlichung",
-        "ru": "Начальная версия",
-        "pt": "lançamento inicial",
-        "nl": "Eerste uitgave",
-        "fr": "Première version",
-        "it": "Versione iniziale",
-        "es": "Versión inicial",
-        "pl": "Pierwsze wydanie",
-        "zh-cn": "首次出版"
       }
     },
-    "title": "VoltoPlus",
     "titleLang": {
       "en": "VoltoPlus",
       "de": "VoltoPlus",
@@ -50,7 +21,8 @@
       "it": "Volto Plus",
       "es": "Volto Plus",
       "pl": "VoltoPlus",
-      "zh-cn": "VoltoPlus"
+      "zh-cn": "VoltoPlus",
+      "uk": "VoltoPlus"
     },
     "desc": {
       "en": "Get actual data from VoltoPlus energy meter.",
@@ -62,23 +34,28 @@
       "it": "Ottieni i dati effettivi dal contatore di energia VoltoPlus.",
       "es": "Obtenga datos reales del medidor de energía VoltoPlus.",
       "pl": "Uzyskaj aktualne dane z licznika energii VoltoPlus.",
-      "zh-cn": "从 VoltoPlus 电能表获取实际数据。"
+      "zh-cn": "从 VoltoPlus 电能表获取实际数据。",
+      "uk":"Отримуйте актуальні дані з лічильника електроенергії VoltoPlus."
     },
     "authors": [
       "Jey Cee <jey-cee@live.com>"
     ],
     "keywords": [
+      "ioBroker",
       "Energy meter",
       "VoltoPlus"
     ],
-    "license": "MIT",
+    "licenseInformation": {
+      "type": "free",
+      "license": "MIT"
+    },
     "platform": "Javascript/Node.js",
-    "main": "main.js",
     "icon": "voltoplus.png",
     "enabled": true,
     "extIcon": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.voltoplus/main/admin/voltoplus.png",
     "readme": "https://github.com/Jey-Cee/ioBroker.voltoplus/blob/main/README.md",
     "loglevel": "info",
+    "tier": 3,
     "mode": "daemon",
     "type": "energy",
     "compact": true,
@@ -89,7 +66,7 @@
     },
     "dependencies": [
       {
-        "js-controller": ">=2.0.0"
+        "js-controller": ">=5.0.19"
       }
     ]
   },
