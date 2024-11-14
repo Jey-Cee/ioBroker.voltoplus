@@ -4,7 +4,12 @@
     "ip": {
       "label": "IP",
       "type": "text",
-      "onlyIp4": true
+      "onlyIp4": true,
+      "xl": 3,
+      "lg": 4,
+      "md": 5,
+      "sm": 6,
+      "xs": 12
     }
   }
 }
