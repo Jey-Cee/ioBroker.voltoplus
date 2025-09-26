@@ -82,8 +82,9 @@ class Voltoplus extends utils.Adapter {
 
     async collectAndSetValues() {
         const values = await this.getValues();
-        if (values !== null) {
-            await this.setValues(values);
+        const idValueMap = this.createIdValueMap(values);
+        if (idValueMap !== null) {
+            await this.setValues(idValueMap);
         }
 
         this.timeout = setTimeout(() => {
@@ -129,53 +130,60 @@ class Voltoplus extends utils.Adapter {
 
     async setValues(values) {
         await this.setState('phase_1.voltage', {
-            val: this.getFixedNumber(values[0].value / 100, 2),
+            val: this.getFixedNumber(values.U1 / 100, 2),
             ack: true,
         });
         await this.setState('phase_1.current', {
-            val: this.getFixedNumber(values[3].value / 1000, 3),
+            val: this.getFixedNumber(values.I1 / 1000, 3),
             ack: true,
         });
         await this.setState('phase_1.power', {
-            val: this.getFixedNumber((values[0].value / 100) * (values[3].value / 1000), 0),
+            val: this.getFixedNumber(values.P1, 0),
             ack: true,
         });
         await this.setState('phase_2.voltage', {
-            val: this.getFixedNumber(values[1].value / 100, 2),
+            val: this.getFixedNumber(values.U2 / 100, 2),
             ack: true,
         });
         await this.setState('phase_2.current', {
-            val: this.getFixedNumber(values[4].value / 1000, 3),
+            val: this.getFixedNumber(values.I2 / 1000, 3),
             ack: true,
         });
         await this.setState('phase_2.power', {
-            val: this.getFixedNumber((values[1].value / 100) * (values[4].value / 1000), 0),
+            val: this.getFixedNumber(values.P2, 0),
             ack: true,
         });
         await this.setState('phase_3.voltage', {
-            val: this.getFixedNumber(values[2].value / 100, 2),
+            val: this.getFixedNumber(values.U3 / 100, 2),
             ack: true,
         });
         await this.setState('phase_3.current', {
-            val: this.getFixedNumber(values[5].value / 1000, 3),
+            val: this.getFixedNumber(values.I3 / 1000, 3),
             ack: true,
         });
         await this.setState('phase_3.power', {
-            val: this.getFixedNumber((values[2].value / 100) * (values[5].value / 1000), 0),
+            val: this.getFixedNumber(values.P3, 0),
             ack: true,
         });
         await this.setState('power', {
-            val: parseInt(values[6].value),
+            val: parseInt(values.P),
             ack: true,
         });
         await this.setState('energy_purchased', {
-            val: values[7].value / 10,
+            val: values.fwdEn / 10,
             ack: true,
         });
         await this.setState('energy_supplied', {
-            val: values[8].value / 10,
+            val: values.rvsEn / 10,
             ack: true,
         });
+    }
+
+    createIdValueMap(data) {
+        return data.reduce((acc, item) => {
+            acc[item.id] = item.value;
+            return acc;
+        }, {});
     }
 
     /**
