@@ -37,6 +37,9 @@ or any associated subsidiaries, logos or trademarks.
     ### **WORK IN PROGRESS**
 -->
 
+### **WORK IN PROGRESS**
+* Better value handling
+
 ### 0.1.4 (2024-09-30)
 * Update dependencies
 * Fix issues found by adapter checker

@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /*
  * Created with @iobroker/create-adapter v2.1.1
@@ -6,23 +6,23 @@
 
 // The adapter-core module gives you access to the core ioBroker functions
 // you need to create an adapter
-const utils = require("@iobroker/adapter-core");
+const utils = require('@iobroker/adapter-core');
 
-const axios = require("axios").default;
+const axios = require('axios').default;
 
 class Voltoplus extends utils.Adapter {
     /**
-     * @param {Partial<utils.AdapterOptions>} [options={}]
+     * @param {Partial<utils.AdapterOptions>} [options]
      */
     constructor(options) {
         super({
             ...options,
-            name: "voltoplus",
+            name: 'voltoplus',
         });
-        this.on("ready", this.onReady.bind(this));
+        this.on('ready', this.onReady.bind(this));
         // this.on("stateChange", this.onStateChange.bind(this));
         // this.on("objectChange", this.onObjectChange.bind(this));
-        this.on("unload", this.onUnload.bind(this));
+        this.on('unload', this.onUnload.bind(this));
         this.connectionError = false;
         this.connectionErrorCount = 0;
     }
@@ -36,6 +36,7 @@ class Voltoplus extends utils.Adapter {
 
     /**
      * Is called when adapter shuts down - callback has to be called under any circumstances!
+     *
      * @param {() => void} callback
      */
     onUnload(callback) {
@@ -92,6 +93,7 @@ class Voltoplus extends utils.Adapter {
 
     /**
      * Get the json with values from the Voltoplus
+     *
      * @returns {Promise<null|object>}
      */
     async getValues() {
@@ -99,7 +101,7 @@ class Voltoplus extends utils.Adapter {
         try {
             const response = await axios.get(url);
             this.connectionError = false;
-            this.setStateChanged("info.connection", {
+            this.setStateChanged('info.connection', {
                 val: true,
                 ack: true,
             });
@@ -108,15 +110,15 @@ class Voltoplus extends utils.Adapter {
                 this.connectionErrorCount = 0;
             }
 
-            return response.data["json_values"];
+            return response.data['json_values'];
         } catch (error) {
             this.connectionErrorCount += 1;
             if (this.connectionErrorCount === 30) {
                 this.log.error(
-                    `There was an error while connecting, please check the device and network connection: ${error}`
+                    `There was an error while connecting, please check the device and network connection: ${error}`,
                 );
                 this.connectionError = true;
-                this.setStateChanged("info.connection", {
+                this.setStateChanged('info.connection', {
                     val: false,
                     ack: true,
                 });
@@ -126,60 +128,51 @@ class Voltoplus extends utils.Adapter {
     }
 
     async setValues(values) {
-        await this.setStateAsync("phase_1.voltage", {
+        await this.setState('phase_1.voltage', {
             val: this.getFixedNumber(values[0].value / 100, 2),
             ack: true,
         });
-        await this.setStateAsync("phase_1.current", {
+        await this.setState('phase_1.current', {
             val: this.getFixedNumber(values[3].value / 1000, 3),
             ack: true,
         });
-        await this.setStateAsync("phase_1.power", {
-            val: this.getFixedNumber(
-                (values[0].value / 100) * (values[3].value / 1000),
-                0
-            ),
+        await this.setState('phase_1.power', {
+            val: this.getFixedNumber((values[0].value / 100) * (values[3].value / 1000), 0),
             ack: true,
         });
-        await this.setStateAsync("phase_2.voltage", {
+        await this.setState('phase_2.voltage', {
             val: this.getFixedNumber(values[1].value / 100, 2),
             ack: true,
         });
-        await this.setStateAsync("phase_2.current", {
+        await this.setState('phase_2.current', {
             val: this.getFixedNumber(values[4].value / 1000, 3),
             ack: true,
         });
-        await this.setStateAsync("phase_2.power", {
-            val: this.getFixedNumber(
-                (values[1].value / 100) * (values[4].value / 1000),
-                0
-            ),
+        await this.setState('phase_2.power', {
+            val: this.getFixedNumber((values[1].value / 100) * (values[4].value / 1000), 0),
             ack: true,
         });
-        await this.setStateAsync("phase_3.voltage", {
+        await this.setState('phase_3.voltage', {
             val: this.getFixedNumber(values[2].value / 100, 2),
             ack: true,
         });
-        await this.setStateAsync("phase_3.current", {
+        await this.setState('phase_3.current', {
             val: this.getFixedNumber(values[5].value / 1000, 3),
             ack: true,
         });
-        await this.setStateAsync("phase_3.power", {
-            val: this.getFixedNumber(
-                (values[2].value / 100) * (values[5].value / 1000),
-                0
-            ),
+        await this.setState('phase_3.power', {
+            val: this.getFixedNumber((values[2].value / 100) * (values[5].value / 1000), 0),
             ack: true,
         });
-        await this.setStateAsync("power", {
+        await this.setState('power', {
             val: parseInt(values[6].value),
             ack: true,
         });
-        await this.setStateAsync("energy_purchased", {
+        await this.setState('energy_purchased', {
             val: values[7].value / 10,
             ack: true,
         });
-        await this.setStateAsync("energy_supplied", {
+        await this.setState('energy_supplied', {
             val: values[8].value / 10,
             ack: true,
         });
@@ -187,6 +180,7 @@ class Voltoplus extends utils.Adapter {
 
     /**
      * Get back number with fixed number of decimals
+     *
      * @param {number} number
      * @param {number} decimals
      * @returns {number}
@@ -201,7 +195,7 @@ if (require.main !== module) {
     /**
      * @param {Partial<utils.AdapterOptions>} [options={}]
      */
-    module.exports = (options) => new Voltoplus(options);
+    module.exports = options => new Voltoplus(options);
 } else {
     // otherwise start the instance directly
     new Voltoplus();
