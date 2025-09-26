@@ -82,8 +82,8 @@ class Voltoplus extends utils.Adapter {
 
     async collectAndSetValues() {
         const values = await this.getValues();
-        const idValueMap = this.createIdValueMap(values);
-        if (idValueMap !== null) {
+        if (values !== null) {
+            const idValueMap = this.createIdValueMap(values);
             await this.setValues(idValueMap);
         }
 
