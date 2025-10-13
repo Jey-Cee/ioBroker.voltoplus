@@ -138,7 +138,7 @@ class Voltoplus extends utils.Adapter {
             ack: true,
         });
         await this.setState('phase_1.power', {
-            val: this.getFixedNumber(values.P1, 0),
+            val: parseInt(values.P1),
             ack: true,
         });
         await this.setState('phase_2.voltage', {
@@ -150,7 +150,7 @@ class Voltoplus extends utils.Adapter {
             ack: true,
         });
         await this.setState('phase_2.power', {
-            val: this.getFixedNumber(values.P2, 0),
+            val: parseInt(values.P2),
             ack: true,
         });
         await this.setState('phase_3.voltage', {
@@ -162,7 +162,7 @@ class Voltoplus extends utils.Adapter {
             ack: true,
         });
         await this.setState('phase_3.power', {
-            val: this.getFixedNumber(values.P3, 0),
+            val: parseInt(values.P3),
             ack: true,
         });
         await this.setState('power', {
