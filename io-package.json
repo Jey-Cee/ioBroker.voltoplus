@@ -92,6 +92,7 @@
     },
     "dependencies": [
       {
+        "admin": "7.6.17",
         "js-controller": ">=6.17.14"
       }
     ]
