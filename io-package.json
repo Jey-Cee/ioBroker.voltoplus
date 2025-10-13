@@ -1,21 +1,8 @@
 {
   "common": {
     "name": "voltoplus",
-    "version": "0.2.1",
+    "version": "0.2.0",
     "news": {
-      "0.2.1": {
-        "en": "Fix value handling",
-        "de": "Fehlerbehebung",
-        "ru": "Обработка фиксированных значений",
-        "pt": "Corrigir o tratamento do valor",
-        "nl": "Repareren waarde behandeling",
-        "fr": "Correction de la manipulation des valeurs",
-        "it": "Gestione del valore fisso",
-        "es": "Manejo de valor fijo",
-        "pl": "Napraw obsługę wartości",
-        "uk": "Фіксація вартості",
-        "zh-cn": "修复值处理"
-      },
       "0.2.0": {
         "en": "Better value handling",
         "de": "Bessere Wertschöpfung",
