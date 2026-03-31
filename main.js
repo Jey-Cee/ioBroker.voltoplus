@@ -43,6 +43,7 @@ class Voltoplus extends utils.Adapter {
         try {
             clearTimeout(this.timeout);
             callback();
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
         } catch (e) {
             callback();
         }
