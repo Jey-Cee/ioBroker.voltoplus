@@ -1,570 +1,588 @@
 {
-    "common": {
-        "name": "voltoplus",
-        "version": "0.2.6",
-        "news": {
-            "0.2.6": {
-                "en": "* next try to fix monthly release workflow",
-                "de": "Abhängigkeiten aktualisiert",
-                "ru": "Обновлены зависимости",
-                "pt": "Dependências atualizadas",
-                "nl": "Afhankelijkheden bijgewerkt",
-                "fr": "Dépendances mises à jour",
-                "it": "Dipendenze aggiornate",
-                "es": "Dependencias actualizadas",
-                "pl": "Zaktualizowano zależności",
-                "uk": "Оновлено залежності",
-                "zh-cn": "更新依赖"
-            },
-            "0.2.5": {
-                "en": "* next try to fix monthly release workflow",
-                "de": "Abhängigkeiten aktualisiert",
-                "ru": "Обновлены зависимости",
-                "pt": "Dependências atualizadas",
-                "nl": "Afhankelijkheden bijgewerkt",
-                "fr": "Dépendances mises à jour",
-                "it": "Dipendenze aggiornate",
-                "es": "Dependencias actualizadas",
-                "pl": "Zaktualizowano zależności",
-                "uk": "Оновлено залежності",
-                "zh-cn": "更新依赖"
-            },
-            "0.2.4": {
-                "en": "* switch to PAT for GitHub release token",
-                "de": "Abhängigkeiten aktualisiert",
-                "ru": "Обновлены зависимости",
-                "pt": "Dependências atualizadas",
-                "nl": "Afhankelijkheden bijgewerkt",
-                "fr": "Dépendances mises à jour",
-                "it": "Dipendenze aggiornate",
-                "es": "Dependencias actualizadas",
-                "pl": "Zaktualizowano zależności",
-                "uk": "Оновлено залежності",
-                "zh-cn": "更新依赖"
-            },
-            "0.2.3": {
-                "en": "* dont block test and release\n* remove codeql.yml",
-                "de": "Abhängigkeiten aktualisiert",
-                "ru": "Обновлены зависимости",
-                "pt": "Dependências atualizadas",
-                "nl": "Afhankelijkheden bijgewerkt",
-                "fr": "Dépendances mises à jour",
-                "it": "Dipendenze aggiornate",
-                "es": "Dependencias actualizadas",
-                "pl": "Zaktualizowano zależności",
-                "uk": "Оновлено залежності",
-                "zh-cn": "更新依赖"
-            },
-            "0.2.2": {
-                "en": "* updated codeql.yml fix monthly-release.yml\n* only test against ubuntu-latest\n* fix lint error no-unused-vars in main.js\n* update test and release workflow\n* chore: update monthly release workflow - add io-package.json and README changelog\n* chore: add monthly release workflow\n* Uncomment NPM deployment section in workflow\n* Delete .github/workflows/dependabot-auto-merge.yml.OLD\n* fix admin dependency version to >=7.6.17\n* update dependabot.yml\n* update dependencies\n* Bump @alcalzone/release-script-plugin-license from 3.7.0 to 5.1.1\n* Bump @alcalzone/release-script from 3.8.0 to 5.1.1\n* Bump axios from 1.13.2 to 1.13.6\n* Bump @types/node from 25.0.3 to 25.5.0\n* Update from template: X0000-updateNodeJsAtTestAndRelease\n* Update from template: X0000-setupAutomergeDependabot\n* Update from template: E6005-fixCopyrightYear\n* Bump @types/node from 22.10.3 to 25.0.3\n* Update from template: E40xx-fixSchemaLinkForVsCode",
-                "de": "Abhängigkeiten aktualisiert",
-                "ru": "Обновлены зависимости",
-                "pt": "Dependências atualizadas",
-                "nl": "Afhankelijkheden bijgewerkt",
-                "fr": "Dépendances mises à jour",
-                "it": "Dipendenze aggiornate",
-                "es": "Dependencias actualizadas",
-                "pl": "Zaktualizowano zależności",
-                "uk": "Оновлено залежності",
-                "zh-cn": "更新依赖"
-            },
-            "0.2.1": {
-                "en": "Fix value handling",
-                "de": "Fehlerbehebung",
-                "ru": "Обработка фиксированных значений",
-                "pt": "Corrigir o tratamento do valor",
-                "nl": "Repareren waarde behandeling",
-                "fr": "Correction de la manipulation des valeurs",
-                "it": "Gestione del valore fisso",
-                "es": "Manejo de valor fijo",
-                "pl": "Napraw obsługę wartości",
-                "uk": "Фіксація вартості",
-                "zh-cn": "修复值处理"
-            },
-            "0.2.0": {
-                "en": "Better value handling",
-                "de": "Bessere Wertschöpfung",
-                "ru": "Лучшее управление стоимостью",
-                "pt": "Melhor manuseio de valor",
-                "nl": "Betere waardebehandeling",
-                "fr": "Meilleure gestion de la valeur",
-                "it": "Gestione del valore migliore",
-                "es": "Mejor manejo de valor",
-                "pl": "Lepsze zarządzanie wartością",
-                "uk": "Краще обслуговування цін",
-                "zh-cn": "更好的价值处理"
-            },
-            "0.1.4": {
-                "en": "Maintanance update",
-                "de": "Pflege update"
-            },
-            "0.1.3": {
-                "en": "stable release",
-                "de": "Stabile version"
-            }
-        },
-        "titleLang": {
-            "en": "VoltoPlus",
-            "de": "VoltoPlus",
-            "ru": "ВольтоПлюс",
-            "pt": "Volto Plus",
-            "nl": "VoltoPlus",
-            "fr": "VoltoPlus",
-            "it": "Volto Plus",
-            "es": "Volto Plus",
-            "pl": "VoltoPlus",
-            "zh-cn": "VoltoPlus",
-            "uk": "VoltoPlus"
-        },
-        "desc": {
-            "en": "Get actual data from VoltoPlus energy meter.",
-            "de": "Erhalten Sie aktuelle Daten vom VoltoPlus-Energiezähler.",
-            "ru": "Получите актуальные данные от счетчика энергии VoltoPlus.",
-            "pt": "Obtenha dados reais do medidor de energia VoltoPlus.",
-            "nl": "Krijg actuele gegevens van de VoltoPlus energiemeter.",
-            "fr": "Obtenez les données réelles du compteur d'énergie VoltoPlus.",
-            "it": "Ottieni i dati effettivi dal contatore di energia VoltoPlus.",
-            "es": "Obtenga datos reales del medidor de energía VoltoPlus.",
-            "pl": "Uzyskaj aktualne dane z licznika energii VoltoPlus.",
-            "zh-cn": "从 VoltoPlus 电能表获取实际数据。",
-            "uk": "Отримуйте актуальні дані з лічильника електроенергії VoltoPlus."
-        },
-        "authors": ["Jey Cee <jey-cee@live.com>"],
-        "keywords": ["Energy meter", "VoltoPlus"],
-        "licenseInformation": {
-            "type": "free",
-            "license": "MIT"
-        },
-        "platform": "Javascript/Node.js",
-        "icon": "voltoplus.png",
-        "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.voltoplus/main/admin/voltoplus.png",
-        "readme": "https://github.com/Jey-Cee/ioBroker.voltoplus/blob/main/README.md",
-        "loglevel": "info",
-        "tier": 3,
-        "mode": "daemon",
-        "type": "energy",
-        "compact": true,
-        "connectionType": "local",
-        "dataSource": "poll",
-        "adminUI": {
-            "config": "json"
-        },
-        "dependencies": [
-            {
-                "js-controller": ">=6.17.14"
-            }
-        ],
-        "globalDependencies": [
-            {
-                "admin": ">=7.6.20"
-            }
-        ]
+  "common": {
+    "name": "voltoplus",
+    "version": "0.2.7",
+    "news": {
+      "0.2.7": {
+        "en": "* publish directly from monthly release workflow",
+        "de": "Abhängigkeiten aktualisiert",
+        "ru": "Обновлены зависимости",
+        "pt": "Dependências atualizadas",
+        "nl": "Afhankelijkheden bijgewerkt",
+        "fr": "Dépendances mises à jour",
+        "it": "Dipendenze aggiornate",
+        "es": "Dependencias actualizadas",
+        "pl": "Zaktualizowano zależności",
+        "uk": "Оновлено залежності",
+        "zh-cn": "更新依赖"
+      },
+      "0.2.6": {
+        "en": "* next try to fix monthly release workflow",
+        "de": "Abhängigkeiten aktualisiert",
+        "ru": "Обновлены зависимости",
+        "pt": "Dependências atualizadas",
+        "nl": "Afhankelijkheden bijgewerkt",
+        "fr": "Dépendances mises à jour",
+        "it": "Dipendenze aggiornate",
+        "es": "Dependencias actualizadas",
+        "pl": "Zaktualizowano zależności",
+        "uk": "Оновлено залежності",
+        "zh-cn": "更新依赖"
+      },
+      "0.2.5": {
+        "en": "* next try to fix monthly release workflow",
+        "de": "Abhängigkeiten aktualisiert",
+        "ru": "Обновлены зависимости",
+        "pt": "Dependências atualizadas",
+        "nl": "Afhankelijkheden bijgewerkt",
+        "fr": "Dépendances mises à jour",
+        "it": "Dipendenze aggiornate",
+        "es": "Dependencias actualizadas",
+        "pl": "Zaktualizowano zależności",
+        "uk": "Оновлено залежності",
+        "zh-cn": "更新依赖"
+      },
+      "0.2.4": {
+        "en": "* switch to PAT for GitHub release token",
+        "de": "Abhängigkeiten aktualisiert",
+        "ru": "Обновлены зависимости",
+        "pt": "Dependências atualizadas",
+        "nl": "Afhankelijkheden bijgewerkt",
+        "fr": "Dépendances mises à jour",
+        "it": "Dipendenze aggiornate",
+        "es": "Dependencias actualizadas",
+        "pl": "Zaktualizowano zależności",
+        "uk": "Оновлено залежності",
+        "zh-cn": "更新依赖"
+      },
+      "0.2.3": {
+        "en": "* dont block test and release\n* remove codeql.yml",
+        "de": "Abhängigkeiten aktualisiert",
+        "ru": "Обновлены зависимости",
+        "pt": "Dependências atualizadas",
+        "nl": "Afhankelijkheden bijgewerkt",
+        "fr": "Dépendances mises à jour",
+        "it": "Dipendenze aggiornate",
+        "es": "Dependencias actualizadas",
+        "pl": "Zaktualizowano zależności",
+        "uk": "Оновлено залежності",
+        "zh-cn": "更新依赖"
+      },
+      "0.2.2": {
+        "en": "* updated codeql.yml fix monthly-release.yml\n* only test against ubuntu-latest\n* fix lint error no-unused-vars in main.js\n* update test and release workflow\n* chore: update monthly release workflow - add io-package.json and README changelog\n* chore: add monthly release workflow\n* Uncomment NPM deployment section in workflow\n* Delete .github/workflows/dependabot-auto-merge.yml.OLD\n* fix admin dependency version to >=7.6.17\n* update dependabot.yml\n* update dependencies\n* Bump @alcalzone/release-script-plugin-license from 3.7.0 to 5.1.1\n* Bump @alcalzone/release-script from 3.8.0 to 5.1.1\n* Bump axios from 1.13.2 to 1.13.6\n* Bump @types/node from 25.0.3 to 25.5.0\n* Update from template: X0000-updateNodeJsAtTestAndRelease\n* Update from template: X0000-setupAutomergeDependabot\n* Update from template: E6005-fixCopyrightYear\n* Bump @types/node from 22.10.3 to 25.0.3\n* Update from template: E40xx-fixSchemaLinkForVsCode",
+        "de": "Abhängigkeiten aktualisiert",
+        "ru": "Обновлены зависимости",
+        "pt": "Dependências atualizadas",
+        "nl": "Afhankelijkheden bijgewerkt",
+        "fr": "Dépendances mises à jour",
+        "it": "Dipendenze aggiornate",
+        "es": "Dependencias actualizadas",
+        "pl": "Zaktualizowano zależności",
+        "uk": "Оновлено залежності",
+        "zh-cn": "更新依赖"
+      },
+      "0.2.1": {
+        "en": "Fix value handling",
+        "de": "Fehlerbehebung",
+        "ru": "Обработка фиксированных значений",
+        "pt": "Corrigir o tratamento do valor",
+        "nl": "Repareren waarde behandeling",
+        "fr": "Correction de la manipulation des valeurs",
+        "it": "Gestione del valore fisso",
+        "es": "Manejo de valor fijo",
+        "pl": "Napraw obsługę wartości",
+        "uk": "Фіксація вартості",
+        "zh-cn": "修复值处理"
+      },
+      "0.2.0": {
+        "en": "Better value handling",
+        "de": "Bessere Wertschöpfung",
+        "ru": "Лучшее управление стоимостью",
+        "pt": "Melhor manuseio de valor",
+        "nl": "Betere waardebehandeling",
+        "fr": "Meilleure gestion de la valeur",
+        "it": "Gestione del valore migliore",
+        "es": "Mejor manejo de valor",
+        "pl": "Lepsze zarządzanie wartością",
+        "uk": "Краще обслуговування цін",
+        "zh-cn": "更好的价值处理"
+      },
+      "0.1.4": {
+        "en": "Maintanance update",
+        "de": "Pflege update"
+      },
+      "0.1.3": {
+        "en": "stable release",
+        "de": "Stabile version"
+      }
     },
-    "native": {
-        "ip": "0.0.0.0"
+    "titleLang": {
+      "en": "VoltoPlus",
+      "de": "VoltoPlus",
+      "ru": "ВольтоПлюс",
+      "pt": "Volto Plus",
+      "nl": "VoltoPlus",
+      "fr": "VoltoPlus",
+      "it": "Volto Plus",
+      "es": "Volto Plus",
+      "pl": "VoltoPlus",
+      "zh-cn": "VoltoPlus",
+      "uk": "VoltoPlus"
     },
-    "objects": [],
-    "instanceObjects": [
-        {
-            "_id": "info",
-            "type": "channel",
-            "common": {
-                "name": {
-                    "en": "Information",
-                    "de": "Informationen",
-                    "ru": "Информация",
-                    "pt": "Informação",
-                    "nl": "Informatie",
-                    "fr": "Information",
-                    "it": "Informazioni",
-                    "es": "Información",
-                    "pl": "Informacja",
-                    "zh-cn": "信息"
-                }
-            },
-            "native": {}
-        },
-        {
-            "_id": "info.connection",
-            "type": "state",
-            "common": {
-                "role": "indicator.connected",
-                "name": {
-                    "en": "Device connected",
-                    "de": "Gerät verbunden",
-                    "ru": "Устройство подключено",
-                    "pt": "Dispositivo conectado",
-                    "nl": "Apparaat verbonden",
-                    "fr": "Appareil connecté",
-                    "it": "Dispositivo connesso",
-                    "es": "Dispositivo conectado",
-                    "pl": "Urządzenie podłączone",
-                    "zh-cn": "设备已连接"
-                },
-                "type": "boolean",
-                "read": true,
-                "write": false,
-                "def": false
-            },
-            "native": {}
-        },
-        {
-            "_id": "phase_1",
-            "type": "channel",
-            "common": {
-                "name": {
-                    "en": "Phase 1",
-                    "de": "L1",
-                    "ru": "Фаза 1",
-                    "pt": "Fase 1",
-                    "nl": "Fase 1",
-                    "fr": "Phase 1",
-                    "it": "Fase 1",
-                    "es": "Fase 1",
-                    "pl": "Faza 1",
-                    "zh-cn": "相1"
-                }
-            },
-            "native": {}
-        },
-        {
-            "_id": "phase_2",
-            "type": "channel",
-            "common": {
-                "name": {
-                    "en": "Phase 2",
-                    "de": "L2",
-                    "ru": "Фаза 2",
-                    "pt": "Fase 2",
-                    "nl": "Fase 2",
-                    "fr": "Phase 2",
-                    "it": "Fase 2",
-                    "es": "Fase 2",
-                    "pl": "Faza 2",
-                    "zh-cn": "相2"
-                }
-            },
-            "native": {}
-        },
-        {
-            "_id": "phase_3",
-            "type": "channel",
-            "common": {
-                "name": {
-                    "en": "Phase 3",
-                    "de": "L3",
-                    "ru": "Фаза 3",
-                    "pt": "Fase 3",
-                    "nl": "Fase 3",
-                    "fr": "Phase 3",
-                    "it": "Fase 3",
-                    "es": "Fase 3",
-                    "pl": "Faza 3",
-                    "zh-cn": "相3"
-                }
-            },
-            "native": {}
-        },
-        {
-            "_id": "phase_1.voltage",
-            "type": "state",
-            "common": {
-                "name": {
-                    "en": "Voltage",
-                    "de": "Spannung",
-                    "ru": "Напряжение",
-                    "pt": "Tensão",
-                    "nl": "Voltage",
-                    "fr": "Tension",
-                    "it": "Tensione",
-                    "es": "Tensión",
-                    "pl": "Napięcie",
-                    "zh-cn": "电压"
-                },
-                "read": true,
-                "write": false,
-                "type": "number",
-                "role": "value.voltage",
-                "unit": "V",
-                "def": 0
-            },
-            "native": {}
-        },
-        {
-            "_id": "phase_2.voltage",
-            "type": "state",
-            "common": {
-                "name": {
-                    "en": "Voltage",
-                    "de": "Spannung",
-                    "ru": "Напряжение",
-                    "pt": "Tensão",
-                    "nl": "Voltage",
-                    "fr": "Tension",
-                    "it": "Tensione",
-                    "es": "Tensión",
-                    "pl": "Napięcie",
-                    "zh-cn": "电压"
-                },
-                "read": true,
-                "write": false,
-                "type": "number",
-                "role": "value.voltage",
-                "unit": "V",
-                "def": 0
-            },
-            "native": {}
-        },
-        {
-            "_id": "phase_3.voltage",
-            "type": "state",
-            "common": {
-                "name": {
-                    "en": "Voltage",
-                    "de": "Spannung",
-                    "ru": "Напряжение",
-                    "pt": "Tensão",
-                    "nl": "Voltage",
-                    "fr": "Tension",
-                    "it": "Tensione",
-                    "es": "Tensión",
-                    "pl": "Napięcie",
-                    "zh-cn": "电压"
-                },
-                "read": true,
-                "write": false,
-                "type": "number",
-                "role": "value.voltage",
-                "unit": "V",
-                "def": 0
-            },
-            "native": {}
-        },
-        {
-            "_id": "phase_1.current",
-            "type": "state",
-            "common": {
-                "name": {
-                    "en": "Current",
-                    "de": "Strom",
-                    "ru": "Ток",
-                    "pt": "Corrente",
-                    "nl": "Stroom",
-                    "fr": "Courant",
-                    "it": "Corrente",
-                    "es": "Corriente",
-                    "pl": "Prąd",
-                    "zh-cn": "电流"
-                },
-                "read": true,
-                "write": false,
-                "type": "number",
-                "role": "value.current",
-                "unit": "A",
-                "def": 0
-            },
-            "native": {}
-        },
-        {
-            "_id": "phase_2.current",
-            "type": "state",
-            "common": {
-                "name": {
-                    "en": "Current",
-                    "de": "Strom",
-                    "ru": "Ток",
-                    "pt": "Corrente",
-                    "nl": "Stroom",
-                    "fr": "Courant",
-                    "it": "Corrente",
-                    "es": "Corriente",
-                    "pl": "Prąd",
-                    "zh-cn": "电流"
-                },
-                "read": true,
-                "write": false,
-                "type": "number",
-                "role": "value.current",
-                "unit": "A",
-                "def": 0
-            },
-            "native": {}
-        },
-        {
-            "_id": "phase_3.current",
-            "type": "state",
-            "common": {
-                "name": {
-                    "en": "Current",
-                    "de": "Strom",
-                    "ru": "Ток",
-                    "pt": "Corrente",
-                    "nl": "Stroom",
-                    "fr": "Courant",
-                    "it": "Corrente",
-                    "es": "Corriente",
-                    "pl": "Prąd",
-                    "zh-cn": "电流"
-                },
-                "read": true,
-                "write": false,
-                "type": "number",
-                "role": "value.current",
-                "unit": "A",
-                "def": 0
-            },
-            "native": {}
-        },
-        {
-            "_id": "phase_1.power",
-            "type": "state",
-            "common": {
-                "name": {
-                    "en": "Power",
-                    "de": "Leistung",
-                    "ru": "Мощность",
-                    "pt": "Potência",
-                    "nl": "Vermogen",
-                    "fr": "Puissance",
-                    "it": "Potenza",
-                    "es": "Potencia",
-                    "pl": "Moc",
-                    "zh-cn": "功率"
-                },
-                "read": true,
-                "write": false,
-                "type": "number",
-                "role": "value.power",
-                "unit": "W",
-                "def": 0
-            },
-            "native": {}
-        },
-        {
-            "_id": "phase_2.power",
-            "type": "state",
-            "common": {
-                "name": {
-                    "en": "Power",
-                    "de": "Leistung",
-                    "ru": "Мощность",
-                    "pt": "Potência",
-                    "nl": "Vermogen",
-                    "fr": "Puissance",
-                    "it": "Potenza",
-                    "es": "Potencia",
-                    "pl": "Moc",
-                    "zh-cn": "功率"
-                },
-                "read": true,
-                "write": false,
-                "type": "number",
-                "role": "value.power",
-                "unit": "W",
-                "def": 0
-            },
-            "native": {}
-        },
-        {
-            "_id": "phase_3.power",
-            "type": "state",
-            "common": {
-                "name": {
-                    "en": "Power",
-                    "de": "Leistung",
-                    "ru": "Мощность",
-                    "pt": "Potência",
-                    "nl": "Vermogen",
-                    "fr": "Puissance",
-                    "it": "Potenza",
-                    "es": "Potencia",
-                    "pl": "Moc",
-                    "zh-cn": "功率"
-                },
-                "read": true,
-                "write": false,
-                "type": "number",
-                "role": "value.power",
-                "unit": "W",
-                "def": 0
-            },
-            "native": {}
-        },
-        {
-            "_id": "power",
-            "type": "state",
-            "common": {
-                "name": {
-                    "en": "Power over all",
-                    "de": "Leistung Gesamt",
-                    "ru": "Мощность всего",
-                    "pt": "Potência todo",
-                    "nl": "Vermogen overal",
-                    "fr": "Puissance tout",
-                    "it": "Potenza tutta",
-                    "es": "Potencia todo",
-                    "pl": "Moc wszystkie",
-                    "zh-cn": "功率总和"
-                },
-                "read": true,
-                "write": false,
-                "type": "number",
-                "role": "value.power",
-                "unit": "W",
-                "def": 0
-            },
-            "native": {}
-        },
-        {
-            "_id": "energy_purchased",
-            "type": "state",
-            "common": {
-                "name": {
-                    "en": "Energy purchased",
-                    "de": "Bezogene Energie",
-                    "ru": "Энергия покупаемая",
-                    "pt": "Energia comprada",
-                    "nl": "Energie gekocht",
-                    "fr": "Energie achetée",
-                    "it": "Energia acquistata",
-                    "es": "Energía comprada",
-                    "pl": "Energia zakupiona",
-                    "zh-cn": "购买能量"
-                },
-                "read": true,
-                "write": false,
-                "type": "number",
-                "role": "value.power",
-                "unit": "kWh",
-                "def": 0
-            },
-            "native": {}
-        },
-        {
-            "_id": "energy_supplied",
-            "type": "state",
-            "common": {
-                "name": {
-                    "en": "Energy supplied",
-                    "de": "Gelieferte Energie",
-                    "ru": "Энергия предоставляемая",
-                    "pt": "Energia fornecida",
-                    "nl": "Energie aangeboden",
-                    "fr": "Energie fournie",
-                    "it": "Energia fornita",
-                    "es": "Energía suministrada",
-                    "pl": "Energia dostarczona",
-                    "zh-cn": "供给能量"
-                },
-                "read": true,
-                "write": false,
-                "type": "number",
-                "role": "value.power",
-                "unit": "kWh",
-                "def": 0
-            },
-            "native": {}
-        }
+    "desc": {
+      "en": "Get actual data from VoltoPlus energy meter.",
+      "de": "Erhalten Sie aktuelle Daten vom VoltoPlus-Energiezähler.",
+      "ru": "Получите актуальные данные от счетчика энергии VoltoPlus.",
+      "pt": "Obtenha dados reais do medidor de energia VoltoPlus.",
+      "nl": "Krijg actuele gegevens van de VoltoPlus energiemeter.",
+      "fr": "Obtenez les données réelles du compteur d'énergie VoltoPlus.",
+      "it": "Ottieni i dati effettivi dal contatore di energia VoltoPlus.",
+      "es": "Obtenga datos reales del medidor de energía VoltoPlus.",
+      "pl": "Uzyskaj aktualne dane z licznika energii VoltoPlus.",
+      "zh-cn": "从 VoltoPlus 电能表获取实际数据。",
+      "uk": "Отримуйте актуальні дані з лічильника електроенергії VoltoPlus."
+    },
+    "authors": [
+      "Jey Cee <jey-cee@live.com>"
+    ],
+    "keywords": [
+      "Energy meter",
+      "VoltoPlus"
+    ],
+    "licenseInformation": {
+      "type": "free",
+      "license": "MIT"
+    },
+    "platform": "Javascript/Node.js",
+    "icon": "voltoplus.png",
+    "enabled": true,
+    "extIcon": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.voltoplus/main/admin/voltoplus.png",
+    "readme": "https://github.com/Jey-Cee/ioBroker.voltoplus/blob/main/README.md",
+    "loglevel": "info",
+    "tier": 3,
+    "mode": "daemon",
+    "type": "energy",
+    "compact": true,
+    "connectionType": "local",
+    "dataSource": "poll",
+    "adminUI": {
+      "config": "json"
+    },
+    "dependencies": [
+      {
+        "js-controller": ">=6.17.14"
+      }
+    ],
+    "globalDependencies": [
+      {
+        "admin": ">=7.6.20"
+      }
     ]
+  },
+  "native": {
+    "ip": "0.0.0.0"
+  },
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": {
+          "en": "Information",
+          "de": "Informationen",
+          "ru": "Информация",
+          "pt": "Informação",
+          "nl": "Informatie",
+          "fr": "Information",
+          "it": "Informazioni",
+          "es": "Información",
+          "pl": "Informacja",
+          "zh-cn": "信息"
+        }
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "role": "indicator.connected",
+        "name": {
+          "en": "Device connected",
+          "de": "Gerät verbunden",
+          "ru": "Устройство подключено",
+          "pt": "Dispositivo conectado",
+          "nl": "Apparaat verbonden",
+          "fr": "Appareil connecté",
+          "it": "Dispositivo connesso",
+          "es": "Dispositivo conectado",
+          "pl": "Urządzenie podłączone",
+          "zh-cn": "设备已连接"
+        },
+        "type": "boolean",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "phase_1",
+      "type": "channel",
+      "common": {
+        "name": {
+          "en": "Phase 1",
+          "de": "L1",
+          "ru": "Фаза 1",
+          "pt": "Fase 1",
+          "nl": "Fase 1",
+          "fr": "Phase 1",
+          "it": "Fase 1",
+          "es": "Fase 1",
+          "pl": "Faza 1",
+          "zh-cn": "相1"
+        }
+      },
+      "native": {}
+    },
+    {
+      "_id": "phase_2",
+      "type": "channel",
+      "common": {
+        "name": {
+          "en": "Phase 2",
+          "de": "L2",
+          "ru": "Фаза 2",
+          "pt": "Fase 2",
+          "nl": "Fase 2",
+          "fr": "Phase 2",
+          "it": "Fase 2",
+          "es": "Fase 2",
+          "pl": "Faza 2",
+          "zh-cn": "相2"
+        }
+      },
+      "native": {}
+    },
+    {
+      "_id": "phase_3",
+      "type": "channel",
+      "common": {
+        "name": {
+          "en": "Phase 3",
+          "de": "L3",
+          "ru": "Фаза 3",
+          "pt": "Fase 3",
+          "nl": "Fase 3",
+          "fr": "Phase 3",
+          "it": "Fase 3",
+          "es": "Fase 3",
+          "pl": "Faza 3",
+          "zh-cn": "相3"
+        }
+      },
+      "native": {}
+    },
+    {
+      "_id": "phase_1.voltage",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Voltage",
+          "de": "Spannung",
+          "ru": "Напряжение",
+          "pt": "Tensão",
+          "nl": "Voltage",
+          "fr": "Tension",
+          "it": "Tensione",
+          "es": "Tensión",
+          "pl": "Napięcie",
+          "zh-cn": "电压"
+        },
+        "read": true,
+        "write": false,
+        "type": "number",
+        "role": "value.voltage",
+        "unit": "V",
+        "def": 0
+      },
+      "native": {}
+    },
+    {
+      "_id": "phase_2.voltage",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Voltage",
+          "de": "Spannung",
+          "ru": "Напряжение",
+          "pt": "Tensão",
+          "nl": "Voltage",
+          "fr": "Tension",
+          "it": "Tensione",
+          "es": "Tensión",
+          "pl": "Napięcie",
+          "zh-cn": "电压"
+        },
+        "read": true,
+        "write": false,
+        "type": "number",
+        "role": "value.voltage",
+        "unit": "V",
+        "def": 0
+      },
+      "native": {}
+    },
+    {
+      "_id": "phase_3.voltage",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Voltage",
+          "de": "Spannung",
+          "ru": "Напряжение",
+          "pt": "Tensão",
+          "nl": "Voltage",
+          "fr": "Tension",
+          "it": "Tensione",
+          "es": "Tensión",
+          "pl": "Napięcie",
+          "zh-cn": "电压"
+        },
+        "read": true,
+        "write": false,
+        "type": "number",
+        "role": "value.voltage",
+        "unit": "V",
+        "def": 0
+      },
+      "native": {}
+    },
+    {
+      "_id": "phase_1.current",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Current",
+          "de": "Strom",
+          "ru": "Ток",
+          "pt": "Corrente",
+          "nl": "Stroom",
+          "fr": "Courant",
+          "it": "Corrente",
+          "es": "Corriente",
+          "pl": "Prąd",
+          "zh-cn": "电流"
+        },
+        "read": true,
+        "write": false,
+        "type": "number",
+        "role": "value.current",
+        "unit": "A",
+        "def": 0
+      },
+      "native": {}
+    },
+    {
+      "_id": "phase_2.current",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Current",
+          "de": "Strom",
+          "ru": "Ток",
+          "pt": "Corrente",
+          "nl": "Stroom",
+          "fr": "Courant",
+          "it": "Corrente",
+          "es": "Corriente",
+          "pl": "Prąd",
+          "zh-cn": "电流"
+        },
+        "read": true,
+        "write": false,
+        "type": "number",
+        "role": "value.current",
+        "unit": "A",
+        "def": 0
+      },
+      "native": {}
+    },
+    {
+      "_id": "phase_3.current",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Current",
+          "de": "Strom",
+          "ru": "Ток",
+          "pt": "Corrente",
+          "nl": "Stroom",
+          "fr": "Courant",
+          "it": "Corrente",
+          "es": "Corriente",
+          "pl": "Prąd",
+          "zh-cn": "电流"
+        },
+        "read": true,
+        "write": false,
+        "type": "number",
+        "role": "value.current",
+        "unit": "A",
+        "def": 0
+      },
+      "native": {}
+    },
+    {
+      "_id": "phase_1.power",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Power",
+          "de": "Leistung",
+          "ru": "Мощность",
+          "pt": "Potência",
+          "nl": "Vermogen",
+          "fr": "Puissance",
+          "it": "Potenza",
+          "es": "Potencia",
+          "pl": "Moc",
+          "zh-cn": "功率"
+        },
+        "read": true,
+        "write": false,
+        "type": "number",
+        "role": "value.power",
+        "unit": "W",
+        "def": 0
+      },
+      "native": {}
+    },
+    {
+      "_id": "phase_2.power",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Power",
+          "de": "Leistung",
+          "ru": "Мощность",
+          "pt": "Potência",
+          "nl": "Vermogen",
+          "fr": "Puissance",
+          "it": "Potenza",
+          "es": "Potencia",
+          "pl": "Moc",
+          "zh-cn": "功率"
+        },
+        "read": true,
+        "write": false,
+        "type": "number",
+        "role": "value.power",
+        "unit": "W",
+        "def": 0
+      },
+      "native": {}
+    },
+    {
+      "_id": "phase_3.power",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Power",
+          "de": "Leistung",
+          "ru": "Мощность",
+          "pt": "Potência",
+          "nl": "Vermogen",
+          "fr": "Puissance",
+          "it": "Potenza",
+          "es": "Potencia",
+          "pl": "Moc",
+          "zh-cn": "功率"
+        },
+        "read": true,
+        "write": false,
+        "type": "number",
+        "role": "value.power",
+        "unit": "W",
+        "def": 0
+      },
+      "native": {}
+    },
+    {
+      "_id": "power",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Power over all",
+          "de": "Leistung Gesamt",
+          "ru": "Мощность всего",
+          "pt": "Potência todo",
+          "nl": "Vermogen overal",
+          "fr": "Puissance tout",
+          "it": "Potenza tutta",
+          "es": "Potencia todo",
+          "pl": "Moc wszystkie",
+          "zh-cn": "功率总和"
+        },
+        "read": true,
+        "write": false,
+        "type": "number",
+        "role": "value.power",
+        "unit": "W",
+        "def": 0
+      },
+      "native": {}
+    },
+    {
+      "_id": "energy_purchased",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Energy purchased",
+          "de": "Bezogene Energie",
+          "ru": "Энергия покупаемая",
+          "pt": "Energia comprada",
+          "nl": "Energie gekocht",
+          "fr": "Energie achetée",
+          "it": "Energia acquistata",
+          "es": "Energía comprada",
+          "pl": "Energia zakupiona",
+          "zh-cn": "购买能量"
+        },
+        "read": true,
+        "write": false,
+        "type": "number",
+        "role": "value.power",
+        "unit": "kWh",
+        "def": 0
+      },
+      "native": {}
+    },
+    {
+      "_id": "energy_supplied",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Energy supplied",
+          "de": "Gelieferte Energie",
+          "ru": "Энергия предоставляемая",
+          "pt": "Energia fornecida",
+          "nl": "Energie aangeboden",
+          "fr": "Energie fournie",
+          "it": "Energia fornita",
+          "es": "Energía suministrada",
+          "pl": "Energia dostarczona",
+          "zh-cn": "供给能量"
+        },
+        "read": true,
+        "write": false,
+        "type": "number",
+        "role": "value.power",
+        "unit": "kWh",
+        "def": 0
+      },
+      "native": {}
+    }
+  ]
 }
