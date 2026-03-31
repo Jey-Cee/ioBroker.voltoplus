@@ -40,6 +40,9 @@ or any associated subsidiaries, logos or trademarks.
 ### ***WORK IN PROGRESS***
 * Update dependencies
 
+### 0.2.6 (2026-03-31)
+* next try to fix monthly release workflow
+
 ### 0.2.5 (2026-03-31)
 * next try to fix monthly release workflow
 
