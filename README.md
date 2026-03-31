@@ -40,6 +40,10 @@ or any associated subsidiaries, logos or trademarks.
 ### ***WORK IN PROGRESS***
 * Update dependencies
 
+### 0.2.3 (2026-03-31)
+* dont block test and release
+* remove codeql.yml
+
 ### 0.2.2 (2026-03-31)
 * updated codeql.yml fix monthly-release.yml
 * only test against ubuntu-latest

@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "voltoplus",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "news": {
+      "0.2.3": {
+        "en": "* dont block test and release\n* remove codeql.yml",
+        "de": "Abhängigkeiten aktualisiert",
+        "ru": "Обновлены зависимости",
+        "pt": "Dependências atualizadas",
+        "nl": "Afhankelijkheden bijgewerkt",
+        "fr": "Dépendances mises à jour",
+        "it": "Dipendenze aggiornate",
+        "es": "Dependencias actualizadas",
+        "pl": "Zaktualizowano zależności",
+        "uk": "Оновлено залежності",
+        "zh-cn": "更新依赖"
+      },
       "0.2.2": {
         "en": "* updated codeql.yml fix monthly-release.yml\n* only test against ubuntu-latest\n* fix lint error no-unused-vars in main.js\n* update test and release workflow\n* chore: update monthly release workflow - add io-package.json and README changelog\n* chore: add monthly release workflow\n* Uncomment NPM deployment section in workflow\n* Delete .github/workflows/dependabot-auto-merge.yml.OLD\n* fix admin dependency version to >=7.6.17\n* update dependabot.yml\n* update dependencies\n* Bump @alcalzone/release-script-plugin-license from 3.7.0 to 5.1.1\n* Bump @alcalzone/release-script from 3.8.0 to 5.1.1\n* Bump axios from 1.13.2 to 1.13.6\n* Bump @types/node from 25.0.3 to 25.5.0\n* Update from template: X0000-updateNodeJsAtTestAndRelease\n* Update from template: X0000-setupAutomergeDependabot\n* Update from template: E6005-fixCopyrightYear\n* Bump @types/node from 22.10.3 to 25.0.3\n* Update from template: E40xx-fixSchemaLinkForVsCode",
         "de": "Abhängigkeiten aktualisiert",
