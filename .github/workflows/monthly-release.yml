@@ -182,4 +182,5 @@ jobs:
           [ -f package-lock.json ] && git add package-lock.json
           git commit -m "chore: release v${VERSION}"
           git tag "v${VERSION}"
-          git push origin HEAD --tags
+          git push origin HEAD
+          git push origin "v${VERSION}"
