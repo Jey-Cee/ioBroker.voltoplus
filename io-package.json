@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "voltoplus",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "news": {
+      "0.2.4": {
+        "en": "* switch to PAT for GitHub release token",
+        "de": "Abhängigkeiten aktualisiert",
+        "ru": "Обновлены зависимости",
+        "pt": "Dependências atualizadas",
+        "nl": "Afhankelijkheden bijgewerkt",
+        "fr": "Dépendances mises à jour",
+        "it": "Dipendenze aggiornate",
+        "es": "Dependencias actualizadas",
+        "pl": "Zaktualizowano zależności",
+        "uk": "Оновлено залежності",
+        "zh-cn": "更新依赖"
+      },
       "0.2.3": {
         "en": "* dont block test and release\n* remove codeql.yml",
         "de": "Abhängigkeiten aktualisiert",
