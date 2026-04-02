@@ -1,8 +1,21 @@
 {
     "common": {
         "name": "voltoplus",
-        "version": "0.2.7",
+        "version": "0.2.8",
         "news": {
+            "0.2.8": {
+                "en": "Update dependencies\nautomate release",
+                "de": "Abhängigkeiten aktualisiert\nAutomatisches Release",
+                "ru": "Обновление зависимостей\nавтоматическое высвобождение",
+                "pt": "Atualizar dependências\nautomatizar a liberação",
+                "nl": "Afhankelijkheden bijwerken\nautomatiseren",
+                "fr": "Mise à jour des dépendances\nautomatiser la libération",
+                "it": "Dipendenze di aggiornamento\nrilascio automatico",
+                "es": "Actualizar las dependencias\nautomate release",
+                "pl": "Aktualizuj zależności\nautomatyzacji wydania",
+                "uk": "Оновлення залежності\nавтоматичний реліз",
+                "zh-cn": "更新依赖关系\n自动释放"
+            },
             "0.2.7": {
                 "en": "* publish directly from monthly release workflow",
                 "de": "Abhängigkeiten aktualisiert",
