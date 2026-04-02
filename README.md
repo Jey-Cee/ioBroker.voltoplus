@@ -37,7 +37,7 @@ or any associated subsidiaries, logos or trademarks.
     ### **WORK IN PROGRESS**
 -->
 
-### ***WORK IN PROGRESS***
+### **WORK IN PROGRESS**
 * Update dependencies
 * automate release
 
